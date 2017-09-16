@@ -1,0 +1,75 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Table Test
+        link(rel='stylesheet', href='style.css')
+    body
+        mixin stars()
+            ul.js-stars.stars
+                li.stars__item ★
+                li.stars__item ★
+                li.stars__item ★
+                li.stars__item ★
+                li.stars__item ★
+
+        div.app-wrap
+            div.table
+                div.table__item.table-item(data-date="25")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Понедельник, 25
+                        div.table-item__stars
+                            +stars()
+                div.table__item.table-item(data-date="26")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Вторник, 26
+                        div.table-item__stars
+                            +stars()
+                div.table__item.table-item(data-date="27")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Среда, 27
+                        div.table-item__stars
+                            +stars()
+                div.table__item.table-item(data-date="28")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Четверг, 28
+                        div.table-item__stars
+                            +stars()
+                div.table__item.table-item(data-date="1")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Пятница, 1
+                        div.table-item__stars
+                            +stars()
+                div.table__item.table-item(data-date="2")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Суббота, 2
+                        div.table-item__stars
+                            +stars()
+                div.table__item.table-item(data-date="3")
+                    div.table-item__size
+                    div.table-item__content
+                        div.table-item__header Воскресенье, 3
+                        div.table-item__stars
+                            +stars()
+
+                - for (var x = 4; x < 32; x++)
+                    div.table__item.table-item(data-date=x)
+                        div.table-item__size
+                        div.table-item__content
+                            div.table-item__header= x
+                            div.table-item__stars
+                                +stars()
+
+
+
+        script(src='jquery.min.js')
+        script(src='common.js')
